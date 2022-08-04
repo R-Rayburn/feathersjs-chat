@@ -1,0 +1,39 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "oauth": {
+      "redirect": "/",
+      "github": {
+        "key": "79a30022d4093a481892",
+        "secret": "6132f9d3b9a59e07e2108fdcd80b47bc2c93c40f"
+      }
+    },
+    "entity": "user",
+    "service": "users",
+    "secret": "oJcZMyVE6fWdtm31+j3Qjslzabc=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  },
+  "nedb": "../data"
+}
